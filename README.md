@@ -4,3 +4,4 @@
 https://asciinema.org/a/519498 (brain-even)
 https://asciinema.org/a/520360 (brain-calc)
 https://asciinema.org/a/520374 (brain-gcd)
+https://asciinema.org/a/520411 (brain-progression)
