@@ -25,7 +25,7 @@ const playBrainCalc = () => {
     }
     const task = `${firstNumber}${sign}${secondNumber}`;
     tasks.push([task, rightAnswer]);
-  } console.log(game(rule, tasks));
+  } return game(rule, tasks);
 };
 
 export default playBrainCalc;

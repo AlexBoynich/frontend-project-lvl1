@@ -11,12 +11,11 @@ const game = (rule, tasks) => {
     const question = `Question: ${task}`;
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer == rightAnswer) {
+    if (userAnswer.toString() === rightAnswer.toString()) {
       console.log('Correct!');
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
+      return `Let's try again, ${userName}!`;
     }
   }
 
