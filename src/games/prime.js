@@ -20,6 +20,5 @@ const playBrainPrime = () => {
     tasks.push([task, rightAnswer]);
   } return game(rule, tasks);
 };
-console.log(playBrainPrime());
 
 export default playBrainPrime;
