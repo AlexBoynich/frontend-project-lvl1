@@ -15,11 +15,11 @@ const game = (rule, tasks) => {
       console.log('Correct!');
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
+      return console.log(`Let's try again, ${userName}!`);
     }
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  return console.log(`Congratulations, ${userName}!`);
+
 };
 export { rounds, game };
