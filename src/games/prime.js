@@ -11,12 +11,12 @@ const playBrainPrime = () => {
     const task = randomNumber;
     for (let index = 1; index <= randomNumber / 2; index += 1) {
       if (randomNumber % index === 0) {
-        dividers[index - 1] = `${index}`;
+        dividers.push(index);
       }
     }
     if (dividers.length > 1 && dividers.length !== 0) {
-      rightAnswer = 'no';
-    } else rightAnswer = 'yes';
+      rightAnswer = `no`;
+    } else rightAnswer = `yes`;
     tasks.push([task, rightAnswer]);
   }
   game(rule, tasks);
