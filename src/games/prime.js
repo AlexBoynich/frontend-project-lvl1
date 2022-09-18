@@ -15,8 +15,8 @@ const playBrainPrime = () => {
       }
     }
     if (dividers.length > 1 && dividers.length !== 0) {
-      rightAnswer = `no`;
-    } else rightAnswer = `yes`;
+      rightAnswer = 'no';
+    } else rightAnswer = 'yes';
     tasks.push([task, rightAnswer]);
   }
   game(rule, tasks);

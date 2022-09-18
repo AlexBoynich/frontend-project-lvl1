@@ -14,6 +14,6 @@ const playBrainEven = () => {
     } else rightAnswer = 'no';
     tasks.push([task, rightAnswer]);
   }
-   game(rule, tasks);
+  game(rule, tasks);
 };
 export default playBrainEven;
