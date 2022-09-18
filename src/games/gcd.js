@@ -12,7 +12,7 @@ const playBrainNOD = () => {
   for (let i = 0; i < rounds; i += 1) {
     const firstNumber = getRandom();
     const secondNumber = getRandom();
-    const task = `${firstNumber}  ${secondNumber}`;
+    const task = `${firstNumber}  ${secondNumber} `;
     const rightAnswer = NOD(firstNumber, secondNumber);
     tasks.push([task, rightAnswer.toString()]);
   }

@@ -23,7 +23,7 @@ const playBrainCalc = () => {
         break;
       default:
     }
-    const task = `${firstNumber}${sign}${secondNumber}`;
+    const task = `${firstNumber} ${sign} ${secondNumber}`;
     tasks.push([task, rightAnswer.toString()]);
   }
   game(rule, tasks);
