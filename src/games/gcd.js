@@ -14,7 +14,7 @@ const playBrainNOD = () => {
     const secondNumber = getRandom();
     const task = `${firstNumber}  ${secondNumber}`;
     const rightAnswer = NOD(firstNumber, secondNumber);
-    tasks.push([task, rightAnswer]);
+    tasks.push([task, rightAnswer.toString()]);
   }
   game(rule, tasks);
 };
