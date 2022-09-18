@@ -15,7 +15,7 @@ const progression = () => {
       randomProgression[i] = startNumber + i * diffNumber;
     } rightAnswer = randomProgression[randomElement];
     randomProgression[randomElement] = '..';
-    const task = randomProgression;
+    const task = randomProgression.join(' ');
     tasks.push([task, rightAnswer]);
   }
   game(rule, tasks);
