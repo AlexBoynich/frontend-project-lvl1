@@ -23,9 +23,10 @@ const playBrainCalc = () => {
         break;
       default:
     }
-    const task = `${firstNumber}${sign}${secondNumber}`;
+    const task = `${firstNumber} ${sign} ${secondNumber}`;
     tasks.push([task, rightAnswer.toString()]);
-  } return game(rule, tasks);
+  }
+  game(rule, tasks);
 };
 
 export default playBrainCalc;

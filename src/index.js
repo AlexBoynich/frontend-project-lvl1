@@ -20,6 +20,5 @@ const game = (rule, tasks) => {
   }
 
   return console.log(`Congratulations, ${userName}!`);
-
 };
 export { rounds, game };
