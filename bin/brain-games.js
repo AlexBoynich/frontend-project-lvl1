@@ -2,4 +2,4 @@
 
 import userGreeting from '../src/userGreeting.js';
 
-console.log(userGreeting());
+userGreeting();

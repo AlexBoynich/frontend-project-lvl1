@@ -2,4 +2,4 @@
 
 import playBrainNOD from '../src/games/gcd.js';
 
-console.log(playBrainNOD());
+playBrainNOD();

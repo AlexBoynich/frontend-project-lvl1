@@ -1,5 +1,5 @@
 install: 
-	nmp ci
+	npm ci
 brain-games:
 	node bin/brain-games.js
 publish:
@@ -7,9 +7,6 @@ publish:
 
 lint: 
 	npx eslint .
-
-brain-even:
-	node bin/brain-even.js
 
 
 

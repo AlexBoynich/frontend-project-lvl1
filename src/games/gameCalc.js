@@ -1,11 +1,11 @@
-import game from '../index.js';
+import { rounds, game } from '../index.js';
 
 const getRandom = () => Math.trunc(Math.random() * 100);
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const rule = 'What is the result of the expression?';
 const playBrainCalc = () => {
   const tasks = [];
-  for (let i = 0; i <= 3; i += 1) {
+  for (let i = 0; i <= rounds; i += 1) {
     const firstNumber = getRandom();
     const secondNumber = getRandom();
     const signs = ['+', '-', '*'];

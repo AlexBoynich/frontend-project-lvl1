@@ -1,4 +1,4 @@
-import game from '../index.js';
+import { rounds, game } from '../index.js';
 
 const getRandom = () => Math.trunc(Math.random() * 100);
 function NOD(x, y) {
@@ -9,7 +9,7 @@ function NOD(x, y) {
 const rule = 'Find the greatest common divisor of given numbers.';
 const tasks = [];
 const playBrainNOD = () => {
-  for (let i = 0; i <= 2; i += 1) {
+  for (let i = 0; i < rounds; i += 1) {
     const firstNumber = getRandom();
     const secondNumber = getRandom();
     const task = `${firstNumber}  ${secondNumber}`;

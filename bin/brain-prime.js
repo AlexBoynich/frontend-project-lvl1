@@ -2,4 +2,4 @@
 
 import playBrainPrime from '../src/games/prime.js';
 
-console.log(playBrainPrime());
+playBrainPrime();
