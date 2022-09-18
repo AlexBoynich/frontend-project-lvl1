@@ -9,7 +9,7 @@ const playBrainCalc = () => {
     const firstNumber = getRandom();
     const secondNumber = getRandom();
     const signs = ['+', '-', '*'];
-    const sign = signs[random(0, 2)];
+    const sign = signs[random(0, signs.length - 1)];
     let rightAnswer;
     switch (sign) {
       case '+':
@@ -24,7 +24,7 @@ const playBrainCalc = () => {
       default:
     }
     const task = `${firstNumber}${sign}${secondNumber}`;
-    tasks.push([task, rightAnswer]);
+    tasks.push([task, rightAnswer.toString()]);
   } return game(rule, tasks);
 };
 
