@@ -18,7 +18,8 @@ const playBrainPrime = () => {
       rightAnswer = 'no';
     } else rightAnswer = 'yes';
     tasks.push([task, rightAnswer]);
-  } return game(rule, tasks);
+  }
+  game(rule, tasks);
 };
 
 export default playBrainPrime;

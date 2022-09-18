@@ -15,6 +15,7 @@ const playBrainNOD = () => {
     const task = `${firstNumber}  ${secondNumber}`;
     const rightAnswer = NOD(firstNumber, secondNumber);
     tasks.push([task, rightAnswer]);
-  } return game(rule, tasks);
+  }
+  game(rule, tasks);
 };
 export default playBrainNOD;

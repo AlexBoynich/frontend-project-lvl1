@@ -17,6 +17,7 @@ const progression = () => {
     randomProgression[randomElement] = '..';
     const task = randomProgression;
     tasks.push([task, rightAnswer]);
-  } return game(rule, tasks);
+  }
+  game(rule, tasks);
 };
 export default progression;
