@@ -1,4 +1,4 @@
-import { rounds, game } from '../index.js';
+import { rounds, playGame } from '../index.js';
 
 const getRandom = () => Math.trunc(Math.random() * 100);
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,7 +26,7 @@ const playBrainCalc = () => {
     const task = `${firstNumber} ${sign} ${secondNumber}`;
     tasks.push([task, rightAnswer.toString()]);
   }
-  game(rule, tasks);
+  playGame(rule, tasks);
 };
 
 export default playBrainCalc;

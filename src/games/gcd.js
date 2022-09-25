@@ -1,4 +1,4 @@
-import { rounds, game } from '../index.js';
+import { rounds, playGame } from '../index.js';
 
 const getRandom = () => Math.trunc(Math.random() * 100);
 function NOD(x, y) {
@@ -16,6 +16,6 @@ const playBrainNOD = () => {
     const rightAnswer = NOD(firstNumber, secondNumber);
     tasks.push([task, rightAnswer.toString()]);
   }
-  game(rule, tasks);
+  playGame(rule, tasks);
 };
 export default playBrainNOD;

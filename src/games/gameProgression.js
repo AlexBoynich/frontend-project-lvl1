@@ -1,4 +1,4 @@
-import { rounds, game } from '../index.js';
+import { rounds, playGame } from '../index.js';
 
 const tasks = [];
 let rightAnswer;
@@ -18,6 +18,6 @@ const progression = () => {
     const task = randomProgression.join(' ');
     tasks.push([task, rightAnswer]);
   }
-  game(rule, tasks);
+  playGame(rule, tasks);
 };
 export default progression;
