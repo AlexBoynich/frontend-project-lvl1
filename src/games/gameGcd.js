@@ -1,5 +1,5 @@
 import { playGame } from '../index.js';
-import { random } from '../helpers.js'
+import random from '../helpers.js';
 
 function NOD(x, y) {
   if (y > x) return NOD(y, x);

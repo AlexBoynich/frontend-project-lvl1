@@ -1,20 +1,18 @@
 import { playGame } from '../index.js';
-import { random } from '../helpers.js'
+import random from '../helpers.js';
 
 const isNumberSimple = (number) => {
   for (let index = 2; index <= number / 2; index += 1) {
     if (number % index === 0) {
-    return false;
+      return false;
     }
   } return true;
-}
+};
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const makeTasks = () => {
-  let rightAnswer;
-  const dividers = [];
   const randomNumber = random(2, 99);
   const task = randomNumber;
-  rightAnswer = isNumberSimple(randomNumber) ? 'yes' : 'no';
+  const rightAnswer = isNumberSimple(randomNumber) ? 'yes' : 'no';
   return [task, rightAnswer];
 };
 const startGame = () => {
