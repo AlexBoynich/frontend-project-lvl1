@@ -1,20 +1,20 @@
 import { playGame } from '../index.js';
+import { random } from '../helpers.js'
 
-const getRandom = () => Math.trunc(Math.random() * 100);
 function NOD(x, y) {
   if (y > x) return NOD(y, x);
   if (!y) return x;
   return NOD(y, x % y);
 }
 const rule = 'Find the greatest common divisor of given numbers.';
-const tasks = () => {
-  const firstNumber = getRandom();
-  const secondNumber = getRandom();
+const makeTasks = () => {
+  const firstNumber = random(1, 99);
+  const secondNumber = random(1, 99);
   const task = `${firstNumber} ${secondNumber}`;
   const rightAnswer = NOD(firstNumber, secondNumber);
   return [task, rightAnswer.toString()];
 };
 const startGame = () => {
-  playGame(rule, tasks);
+  playGame(rule, makeTasks);
 };
 export default startGame;

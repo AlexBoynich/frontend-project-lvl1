@@ -1,31 +1,33 @@
 import { playGame } from '../index.js';
+import { random } from '../helpers.js'
 
-const getRandom = () => Math.trunc(Math.random() * 100);
-const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const rule = 'What is the result of the expression?';
-const tasks = () => {
-  const firstNumber = getRandom();
-  const secondNumber = getRandom();
-  const signs = ['+', '-', '*'];
-  const sign = signs[random(0, signs.length - 1)];
-  let rightAnswer;
+const getRightSign = (sign, firstNumber, secondNumber) => {
   switch (sign) {
     case '+':
-      rightAnswer = firstNumber + secondNumber;
+      return firstNumber + secondNumber;
       break;
     case '-':
-      rightAnswer = firstNumber - secondNumber;
+      return firstNumber - secondNumber;
       break;
     case '*':
-      rightAnswer = firstNumber * secondNumber;
+      return firstNumber * secondNumber;
       break;
     default:
   }
+}
+const rule = 'What is the result of the expression?';
+const makeTasks = () => {
+  const firstNumber = random(1, 99);
+  const secondNumber = random(1, 99);
+  const signs = ['+', '-', '*'];
+  const sign = signs[random(0, signs.length - 1)];
+  let rightAnswer;
+  rightAnswer = getRightSign(sign, firstNumber, secondNumber);
   const task = `${firstNumber} ${sign} ${secondNumber}`;
   return [task, rightAnswer];
 };
 const startGame = () => {
-  playGame(rule, tasks);
+  playGame(rule, makeTasks);
 };
 
 export default startGame;

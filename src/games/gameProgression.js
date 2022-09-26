@@ -1,22 +1,27 @@
 import { playGame } from '../index.js';
+import { random } from '../helpers.js'
 
-let rightAnswer;
-const getRandom = () => Math.trunc(Math.random() * 100);
-const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const rule = 'What number is missing in the progression?';
-const tasks = () => {
-  const startNumber = getRandom();
+let randomProgression = [];
+const makeRandomProgression = () => {
+  const countOfProgressionNumbers = 9;
+  const startNumber = random(1, 100);
   const diffNumber = random(1, 10);
-  const randomElement = random(0, 9);
-  const randomProgression = [];
-  for (let i = 0; i <= 9; i += 1) {
+  for (let i = 0; i <= countOfProgressionNumbers; i += 1) {
     randomProgression[i] = startNumber + i * diffNumber;
-  } rightAnswer = randomProgression[randomElement];
+  }
+  return randomProgression;
+}
+const rule = 'What number is missing in the progression?';
+const makeTasks = () => {
+  let rightAnswer;
+  const randomElement = random(0, 9);
+  makeRandomProgression();
+   rightAnswer = randomProgression[randomElement];
   randomProgression[randomElement] = '..';
   const task = randomProgression.join(' ');
   return [task, rightAnswer];
 };
 const startGame = () => {
-  playGame(rule, tasks);
+  playGame(rule, makeTasks);
 };
 export default startGame;
