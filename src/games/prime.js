@@ -12,7 +12,7 @@ const tasks = () => {
       dividers.push(index);
     }
   }
-  if (dividers.length > 1  || randomNumber !== 0) {
+  if (dividers.length > 1) {
     rightAnswer = 'no';
   } else rightAnswer = 'yes';
   return [task, rightAnswer];
