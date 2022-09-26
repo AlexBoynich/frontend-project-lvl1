@@ -7,18 +7,16 @@ const playGame = (rule, tasks) => {
   console.log(`Hello, ${userName}!`);
   console.log(`${rule}`);
   for (let i = 0; i < rounds; i += 1) {
-    const [task, rightAnswer] = tasks[i];
+    const [task, rightAnswer] = tasks();
     const question = `Question: ${task}`;
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer.toString() === rightAnswer.toString()) {
-      console.log('Correct!');
-    } else {
+    if (userAnswer.toString() !== rightAnswer.toString()) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
       return console.log(`Let's try again, ${userName}!`);
     }
+    console.log('Correct!');
   }
-
   return console.log(`Congratulations, ${userName}!`);
 };
 export { rounds, playGame };
