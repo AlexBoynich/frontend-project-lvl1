@@ -1,7 +1,7 @@
 import { playGame } from '../index.js';
 import random from '../helpers.js';
 
-const getRightSign = (sign, firstNumber, secondNumber) => {
+const getRightExpression = (sign, firstNumber, secondNumber) => {
   let result;
   switch (sign) {
     case '+':
@@ -23,7 +23,7 @@ const makeTasks = () => {
   const secondNumber = random(1, 99);
   const signs = ['+', '-', '*'];
   const sign = signs[random(0, signs.length - 1)];
-  const rightAnswer = getRightSign(sign, firstNumber, secondNumber);
+  const rightAnswer = getRightExpression(sign, firstNumber, secondNumber);
   const task = `${firstNumber} ${sign} ${secondNumber}`;
   return [task, rightAnswer];
 };
